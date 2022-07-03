@@ -28,17 +28,17 @@ function GoalInput(props) {
           source={require("../assets/images/goal.jpg")}
         />
         <TextInput
-          placeholder="Your course goal"
+          placeholder="Додати задачу"
           style={styles.textInput}
           onChangeText={goalInputHandler}
           value={enteredGoalText}
         />
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
-            <Button title="Add Goal" onPress={addGoalHandler} color='#b180f0' />
+            <Button title="Відмінити" onPress={props.onCancel} color='#f31282'/>
           </View>
           <View style={styles.button}>
-            <Button title="Cancel" onPress={props.onCancel} color='#f31282'/>
+            <Button title="Додати" onPress={addGoalHandler} color='#b180f0' />
           </View>
         </View>
       </View>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    backgroundColor: '#311b6b'
+    backgroundColor: "#311b6b",
   },
   image: {
     width: 100,
@@ -63,16 +63,19 @@ const styles = StyleSheet.create({
   },
   textInput: {
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#e4d0ff",
+    backgroundColor: "#e4d0ff",
+    color: '#120438',
+    borderRadius: 6,
     width: "100%",
-    padding: 8,
+    padding: 16,
   },
   buttonContainer: {
     marginTop: 16,
     flexDirection: "row",
   },
   button: {
-    width: 100,
+    width: 120,
     marginHorizontal: 8,
   },
 });
